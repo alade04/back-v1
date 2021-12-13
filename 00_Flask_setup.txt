@@ -1,0 +1,59 @@
+1. open this file by the side
+2. open the cmd in this project folder
+3. run this codes in the cmd 
+
+mkdir flask-admin
+cd flask-admin
+python -m venv env
+env\Scripts\activate
+python -m pip install --upgrade pip
+pip install Flask
+
+
+4. In your project dir - create Hello.py
+
+from flask import Flask
+app = Flask(__name__)
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
+
+5 Test Flask in cmd
+> python Hello.py  
+> set FLASK_APP=Hello
+> set FLASK_ENV=development
+> flask run
+
+
+6. go to the localhost in the browser
+http://127.0.0.1:5000/
+
+7. add this to Hello.py
+@app.route('/ay/')
+def ay():
+    return 'The ay project page'
+
+@app.route('/about')
+def about():
+    return 'The about page'
+
+8. in the localhost in the browser
+http://127.0.0.1:5000/ay
+http://127.0.0.1:5000/about
+
+
+=========================================
+
+https://flask.palletsprojects.com/en/2.0.x/quickstart/
+
+=========================================
+mkdir flask-admin
+cd flask-admin
+
+pip install pipenv                  # https://linuxtut.com/en/befd79b6df713b08a726/
+or use
+pip install virtualenv
+virtualenv venv
+or 
+use venv
